@@ -7,4 +7,17 @@
 
 def handtodice(hand):
 	# your code goes here
-	pass
+
+
+
+# def getKthDigit(digit, k):
+# 	#5123//10**2
+# 	#51 % 10
+
+# 	#5123//10**3
+# 	#5 % 10
+
+# 	digit = abs(digit)
+# 	p = digit//(10**k)
+# 	v = p % 10
+# 	return v
