@@ -7,8 +7,12 @@
 
 def handtodice(hand):
 	# your code goes here
+	hand = str(hand)
+	# print(hand)
+	hand = list(map(int, hand))
+	hand = tuple(hand)
 
-
+	return hand
 
 # def getKthDigit(digit, k):
 # 	#5123//10**2
