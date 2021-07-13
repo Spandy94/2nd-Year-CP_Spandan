@@ -5,23 +5,22 @@
 # assert(handToDice(422) == (4,2,2))
 # Hint: You might find // and % useful here, and also getKthDigit().
 
+# def handtodice(hand):
+# 	# your code goes here
+# 	hand = str(hand)
+# 	# print(hand)
+# 	hand = list(map(int, hand))
+# 	hand = tuple(hand)
+
+# 	return hand
+
 def handtodice(hand):
 	# your code goes here
-	hand = str(hand)
-	# print(hand)
-	hand = list(map(int, hand))
-	hand = tuple(hand)
+	# hand = str(hand)
+	li = []
+	while(hand>0):
+		li.append(hand%10)
+		hand = hand//10
+		
+	return tuple(reversed(li))
 
-	return hand
-
-# def getKthDigit(digit, k):
-# 	#5123//10**2
-# 	#51 % 10
-
-# 	#5123//10**3
-# 	#5 % 10
-
-# 	digit = abs(digit)
-# 	p = digit//(10**k)
-# 	v = p % 10
-# 	return v
