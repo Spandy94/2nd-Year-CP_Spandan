@@ -54,3 +54,5 @@ def alphaAsia():
     for city in asia_sorted:
         return city
 
+# sortUSA()
+# alphaAsia()
