@@ -42,7 +42,7 @@ def sortUSA():
     '''Return all the cities in the USA in alphabetical order'''
     us_sorted = sorted(locations['North America']['USA'])
     for city in us_sorted:
-        return city
+        print (city)
 
 def alphaAsia():
     '''Return all the cities in Asia continent in alphabetical order'''
@@ -52,7 +52,7 @@ def alphaAsia():
         asia_city.append(city_country)
     asia_sorted = sorted(asia_city)
     for city in asia_sorted:
-        return city
+        print (city)
 
 # sortUSA()
 # alphaAsia()
