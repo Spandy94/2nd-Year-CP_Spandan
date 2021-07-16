@@ -6,4 +6,5 @@
 
 def lineintersection(m1, b1, m2, b2):
 	# your code goes here
-	pass
+	
+	return None
