@@ -6,11 +6,16 @@
 
 def lineintersection(m1, b1, m2, b2):
 	# your code goes here
-	if ((m1 == m2) and (b1 != b2)):
-		return None
-	elif((m1 != m2) and (b1 != b2)):
-		return None
-	else:
-		return (b2-b1)/(m1-m2)
+	x = int((b2-b1)/(m1-m2))
 
+	if(x>0):
+		return x
+	
+	elif(x == 1): 
+		return None
+	
+	elif (x<0):
+		return None
 
+	elif(m1 == m2):
+		return None
