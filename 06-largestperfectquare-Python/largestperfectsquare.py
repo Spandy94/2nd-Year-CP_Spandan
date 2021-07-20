@@ -9,4 +9,6 @@
 
 def largestperfectsquare(n):
 	# your code goes here
-	pass
+	ps = int
+	if (ps == (n)**(1/2) and (ps <= n)
+		return ps
