@@ -10,4 +10,22 @@
 def fun_rectangle_overlap(left1, top1, width1, height1, left2, top2, width2, height2):
     return True
 
-        
+    
+    if (left1>=left2 and left1<=left2+width2 and top1 >=top2 and top1<=top2+height2):
+        return True
+    elif (left1+width1>=left2 and left1+width1<=left2+width2 and top1 >=top2 and top1<=top2+height2):
+        return True
+    elif (left1>=left2 and left1<=left2+width2 and top1+height1 >=top2 and top1+height1<=top2+height2):
+        return True
+    elif (left1+width1>=left2 and left1+width1<=left2+width2 and top1+height1 >=top2 and top1+height1 <=top2+height2):
+        return True
+    elif (left2>=left1 and left2<=left1+width1 and top2 >=top1 and top2<=top1+height1):
+        return True
+    elif (left2+width2>=left1 and left2+width2<=left1+width1 and top2 >=top1 and top2<=top1+height1):
+        return True
+    elif (left2>=left1 and left2<=left1+width1 and top2+height2 >=top1 and top2+height2<=top1+height1):
+        return True
+    elif (left2+width2>=left1 and left2+width2<=left1+width1 and top2+height2 >=top1 and top2+height2 <=top1+height1):
+        return True
+    
+    return False
