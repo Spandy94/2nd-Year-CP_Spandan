@@ -16,4 +16,17 @@
 
 
 def nth_happy_number(n):
-	return 0
+	return n
+
+def isHappyNumber(s):
+	sum = 0
+	s = 0
+	while s != 0:
+		sum += (s % 10) ** 2
+		s //= 10
+	if s == 1:
+		return True
+	elif sum < 10:
+		return False
+	else:
+		return sum
