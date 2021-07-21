@@ -6,10 +6,8 @@
 
 def lineintersection(m1, b1, m2, b2):
 	# your code goes here
-	x = (b2-b1)/(m1-m2)
-
 	if(m1 == m2):
 		return None
 
 	else:
-		return x
+		return (b2-b1)/(m1-m2)
