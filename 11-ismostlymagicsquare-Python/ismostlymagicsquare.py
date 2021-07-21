@@ -16,23 +16,81 @@
 def ismostlymagicsquare(a):
 	# Your code goes here
 	n = len(a)
-	sumdia1 = 0
-	sumdia2 = 0
-	
+	sumd1 = 0
+	sumd2 = 0
+
 	for i in range(n):
-		sumdia1 += a[i][i]
-		sumdia2 += a[i][n-i-1]
+		sumd1 += a[i][i]
+		sumd2 += a[i][n-i-1]
 
-	if not(sumdia1 == sumdia2):
+	if(sumd1 != sumd2):
 		return False
-
+	# sumrow = 0
+	# sumcol = 0
 	for i in range(n):
 		sumrow = 0
 		sumcol = 0
+
 		for j in range(n):
 			sumrow += a[i][j]
 			sumcol += a[j][i]
 
-		if not(sumrow == sumcol == sumdia1):
+		print(sumrow,sumcol,sumd1)
+		if not(sumrow == sumcol == sumd1):
 			return False
+		
 	return True
+
+# ismostlymagicsquare([[2, 7, 6], [9, 5, 1], [4, 3, 8]])
+print(ismostlymagicsquare([[2, 7, 6], [9, 5, 1], [4, 3, 8]]))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	# n = len(a)
+	# sumdia1 = 0
+	# sumdia2 = 0
+	
+	# for i in range(n):
+	# 	sumdia1 += a[i][i]
+	# 	sumdia2 += a[i][n-i-1]
+
+	# if not(sumdia1 == sumdia2):
+	# 	return False
+
+	# for i in range(n):
+	# 	sumrow = 0
+	# 	sumcol = 0
+	# 	for j in range(n):
+	# 		sumrow += a[i][j]
+	# 		sumcol += a[j][i]
+
+	# 	if not(sumrow == sumcol == sumdia1):
+	# 		return False
+	# return True
