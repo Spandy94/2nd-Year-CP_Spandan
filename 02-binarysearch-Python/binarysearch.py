@@ -12,4 +12,20 @@ doesn't exist in the list."""
 
 def binary_search(input_array, value):
     # Your code goes here
-    pass
+    low = 0 
+    high = len(input_array)-1
+
+    while low<=high:
+        mid = (low+high)
+        guess = input_array[mid]
+        # found the element
+        if guess == value:
+            return mid
+        # the guess was too high
+        if guess > value:
+            high = mid - 1
+        # the guess was too low
+        else:
+            low = mid + 1
+    # the item doesn't exist
+    return -1
