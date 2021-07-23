@@ -18,15 +18,15 @@ def isPrime(l):
 	return True
 
 def isPowerful(l):
-	flist = []
-	print('factlist: ', flist)
+	flist = factorslist(l)
+	# print('factlist: ', flist)
 	for i in flist:
 		if isPrime(i) == True:
-			print('i and i**2',i,i**2)
+			# print('i and i**2',i,i**2)
 			if i**2 not in flist:
-				print('i**2 not in factlist')
+				# print('i**2 not in factlist')
 				return False
-	print('i**2 in factlist')
+	# print('i**2 in factlist')
 	return True
 
 def nthpowerfulnumber(n):
@@ -34,7 +34,7 @@ def nthpowerfulnumber(n):
 	num = 1
 	count = 0
 	while count < n+1:
-		print('number= ', num)
+		# print('number= ', num)
 		if isPowerful(num) == True:
 			count += 1
 			num -= 1
