@@ -7,4 +7,18 @@
 
 def issorted(a):
 	# your code goes here
-	pass
+	n = len(a)
+	flag = 0
+	i = 1
+	if(a == sorted(a)):
+		flag = 1
+	else:
+		a1 = a[:]
+		a1.sort(reverse=True)
+		if(a1 == a):
+			flag = 1
+	
+	if (flag):
+		return True
+	else:
+		return False
