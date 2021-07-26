@@ -17,4 +17,6 @@
 
 def matrixadd(L, M):
 	# Your code goes here
-	pass
+	result = [map(sum, zip(*t)) for t in zip(L, M)]
+  
+	return result
