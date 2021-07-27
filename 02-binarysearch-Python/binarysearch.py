@@ -24,7 +24,7 @@ def binary_search(input_array, value):
         # the guess was too high
         if guess > value:
             high = mid - 1
-        # the guess was too low
+        # the guess was too lowP
         else:
             low = mid + 1
     # the item doesn't exist
