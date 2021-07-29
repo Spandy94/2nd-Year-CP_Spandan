@@ -20,6 +20,16 @@
 # inverseLookAndSay([(2,3),(1,8),(3,-10)]) == [3,3,8,-10,-10,-10]
 # inverseLookAndSay([(2,3),(1,8),(4,3)]) == [3,3,8,3,3,3,3])
 
+
+
 def inverselookandsay(a):
 	# Your code goes here
-	pass
+	result = []
+	count = 0
+	for i in a:
+		count = i[0]
+		# print (count)
+		value = i[1]
+		result += ([value]*count)
+	return result
+
