@@ -10,8 +10,27 @@
 # which could be quite handy here.
 # Hint: The time complexity can be achieved in Linear.
 
+chars = 256
 def areAnagrams(s1, s2):
     # Your code goes here...
-    pass
+    count1 = [0]*chars
+    count2 = [0]*chars
+
+    for i in s1:
+        count1[ord(i)] += 1
+
+    for i in s2:
+        count2[ord(i)] += 1
+
+    if len(s1) != len(s2):
+        return 0
+
+    for i in range(chars):
+        if count1[i] != count2[i]:
+            return 0
+    return 1
+
+
+
 
 # write your test cases here...
