@@ -13,6 +13,17 @@
 # Again, you do not need to sort the list. We didn't sort it in our sample solution. We just tracked the two largest 
 # values as we recursively traversed the list. Also, you may not use loops/iteration in this problem
 
+def readList():
+	a = []
+	l = int(input())
+	for i in range(l):
+		a.append(int(input()))
+	return a
+
 def recursion_secondlargest(L):
 	# Your code goes here
-	pass
+	if(len(L) == 0 or len(L) == 1):
+		return None
+	else:
+		p=list(reversed(sorted(L)))
+	return(p[1])
