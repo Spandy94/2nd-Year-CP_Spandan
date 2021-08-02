@@ -8,10 +8,20 @@
 
 
 def fun_getaverage(s):
-	for i in len(s):
-		if i != int(i):
-			return 0
+	# for i in len(s):
+	# 	if i != int(i):
+	# 		return 0
 
-		else:
-			return sum(s)/len(s)
+	# 	else:
+	# 		return sum(s)/len(s)
+	l = s.split(",")
+	l2 = []
+	for i in l:
+		if i.isnumeric() == True:
+			l2.append(int(i))
 
+	if len(l2) == 0:
+		return 0.0
+	else:
+		for i in l2:
+			return float(sum(l2)/len(l2))
