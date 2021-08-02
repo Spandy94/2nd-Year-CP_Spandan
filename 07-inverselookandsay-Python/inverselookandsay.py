@@ -25,8 +25,11 @@
 def inverselookandsay(a):
 	# Your code goes here
     result=[]
-    for n in range(len(a)):
-        (x,y)=a[n]
-        for m in range(x):                #Append x same nums into result
-            result.append(y)
+    if a == [] or a == [(),]:
+        return []
+    else:
+        for i in a:
+            for j in range(i[0]):
+                result.append(i[1])
+
     return result
