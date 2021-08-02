@@ -24,12 +24,9 @@
 
 def inverselookandsay(a):
 	# Your code goes here
-	result = []
-	count = 0
-	for i in a:
-		count = i[0]
-		# print (count)
-		value = i[1]
-		result += ([value]*count)
-	return result
-
+    result=[]
+    for n in range(len(a)):
+        (x,y)=a[n]
+        for m in range(x):                #Append x same nums into result
+            result.append(y)
+    return result
