@@ -9,6 +9,31 @@
 # Note: the autograder will grade each of the following functions, so they are required. 
 # However, they also are here specifically because they are just the right helper 
 # functions to make nthHappyNumber(n) easier to write!
+
+def isHappyNumber(n):
+    if n<=0:
+        return False
+    else:
+        count = 0
+        while n>1:
+            nlist = [int(i) for i in str(n)]
+            n=0
+            for i in nlist:
+                n += i**2
+                count += 1
+                if count == 100:
+                    return False
+        return True
+
+def isPrime(n):
+    for i in range(2,int(n**0.5)+1):
+        if n%i == 0:
+            return False
+    return True
+
 def ishappyprimenumber(n):
     # Your code goes here
-    pass
+    if(isHappyNumber(n) == True):    
+        if(isPrime(n) == True):
+            return True
+    return False
