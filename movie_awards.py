@@ -18,4 +18,19 @@
 
 def movieAwards(oscarResults):
     # Your code goes here...
-    pass
+    mov = {}
+    for i in oscarResults:
+        for j in range(1,len(i)):
+            if i[j] in mov:
+                mov[i[j]]+=1
+            else:
+                mov[i[j]] = 1
+    return mov
+
+    print(movieAwards({("Best Picture", "The Shape of Water"), 
+    ("Best Actor", "Darkest Hour"),
+    ("Best Actress", "Three Billboards Outside Ebbing, Missouri"),
+    ("Best Director", "The Shape of Water"),
+    ("Best Supporting Actor", "Three Billboards Outside Ebbing, Missouri"),
+    ("Best Supporting Actress", "I, Tonya"),
+    ("Best Original Score", "The Shape of Water")}))
