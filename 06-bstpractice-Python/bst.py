@@ -18,20 +18,21 @@ class BST(object):
             parent = self.root
             while(current != None):
                 parent = current
-                if(new_val < current.value):
+                if(new_val<current.value):
                     current = current.left
                 else:
                     current = current.right
-            if(new_val < parent.value):
+            if(new_val<parent.value):
                 parent.left = newNode
             else:
                 parent.right = newNode
 
 
+
     def printSelf(self):
         # Your code goes here
         print(self.root)
-        
+
     def search(self, find_val):
         # Your code goes here
         while self.root != None:
@@ -42,6 +43,7 @@ class BST(object):
             else:
                 self.root = self.root.left
         return False
+
 
 
 
