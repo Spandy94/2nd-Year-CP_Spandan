@@ -6,20 +6,36 @@
 
 def bestQuiz(l):
     # Your  code goes ehre...
-    pass
+      qui = []
+      for i in range(len(l[0])):
+          count = 0
+          avg = 0
+          for j in range(len(l)):
+                if l[j][i] != -1:
+                      avg += l[j][i]
+                      count += 1
+          if count != 0:
+                qui.append(avg/count)
 
-def testBestQuiz():
-    print('Testing bestQuiz()...', end='')
-    a = [ [ 88,  80, 91 ],
-          [ 68, 100, -1 ]]
-    assert(bestQuiz(a) == 2)
-    a = [ [ 88,  80, 80 ],
-          [ 68, 100, 100 ]]
-    assert(bestQuiz(a) == 1)
-    a = [ [88, -1, -1 ],
-          [68, -1, -1 ]]
-    assert(bestQuiz(a) == 0)
-    a = [ [-1, -1, -1 ],
-          [-1, -1, -1 ]]
-    assert(bestQuiz(a) == None)
-    print('All test cases passed...!')
+      if len(qui) < 1:
+           return None
+      
+      return qui.index(max(qui))
+      
+
+
+# def testBestQuiz():
+print('Testing bestQuiz()...', end='')
+a = [ [ 88,  80, 91 ],
+      [ 68, 100, -1 ]]
+assert(bestQuiz(a) == 2)
+a = [ [ 88,  80, 80 ],
+      [ 68, 100, 100 ]]
+assert(bestQuiz(a) == 1)
+a = [ [88, -1, -1 ],
+      [68, -1, -1 ]]
+assert(bestQuiz(a) == 0)
+a = [ [-1, -1, -1 ],
+      [-1, -1, -1 ]]
+assert(bestQuiz(a) == None)
+print('All test cases passed...!')
