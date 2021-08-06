@@ -37,3 +37,14 @@ def ishappyprimenumber(n):
         if(isPrime(n) == True):
             return True
     return False
+
+# def ishappyprimenumber(n):
+#     # Your code goes here
+#     # pass
+#     if isprime(n)==True:
+#         if isHappyNumber(n)==True:
+#             return True
+#         else:
+#             return False
+#     else:
+#         return False
