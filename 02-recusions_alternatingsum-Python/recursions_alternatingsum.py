@@ -15,4 +15,4 @@ def fun_recursions_alternatingsum(l):
 	# else:
 	# 	# print('0, [1:], [2:]',l[0], fun_recursions_alternatingsum(l[1:]), fun_recursions_alternatingsum(l[2:]))
 	# 	# print('res',l[0] - fun_recursions_alternatingsum(l[1:]) + fun_recursions_alternatingsum(l[2:]))
-	# 	return fun_recursions_alternatingsum(l[::2]) - fun_recursions_alternatingsum(l[1::2])
+	# 	return fun_recursions_alternatingsum(l[1::2]) - fun_recursions_alternatingsum(l[2::2])
